@@ -45,11 +45,11 @@
 #### centos系统
 ```
 #更新源
-yum install epel-release
+# yum install epel-release    
 #查看是否安装go环境
-go version
+# go version                  
 #安装go环境
-yum install golang
+# yum install golang          
 ```
 #### `CTList`皮肤文件与`OneList`皮肤文件完全兼容.
 #### 可实现在线浏览图片,在线观看视频等其他功能 [点此前往下载](https://github.com/MoeClub/OneList/tree/master/Rewrite/@Theme)
