@@ -14,43 +14,43 @@
 ```
 [
     {
-        "Enable": 1,                                    # 0: Disable, 1: Enbale.
-                                                        ## 0: 关闭, 1: 打开
-                                                        
-        "UserName": "",                                 # Input Phone Number.
-                                                        ## 天翼云网盘登陆用户名(不要带上'@189.cn').
-                                                        
-        "Password": "",                                 # Input Password.
-                                                        ## 天翼云网盘登陆密码.
-                                                        
-        "CaptchaMode": "0",                             # Captcha Mode. 0: Auto Reject, 1: Manual Input, other: API URL. 
-                                                        ## 验证码. 0: 遇到验证码拒绝登陆, 1: 手动输入验证, 其他: 自动识别验证码的API.
-                                                        
-        "RefreshToken": "",                             # Token. * Do Not Modify It.
-                                                        ## 天翼网盘会话. 保持默认, 如果出现异常, 请将该值清空.
-                                                        
-        "SubPath": "/CTList",                           # Index Path. * Unique Per Account.
-                                                        ## 指定某账户挂载在网站的某个目录, 多账户时每个目录值必须唯一.
-                                                        
-        "RootPathId": "-11",                            # Default Root: -11
-                                                        ## 设置展示天翼网盘目录的ID, 根目录为 -11.
-                                                        
-        "HideItemId": "0|-16",                          # Allow Folder and File.
-                                                        ## 不展示某个目录或文件, 填写其ID. 每项用"|"分隔.
-                                                        
-        "AuthItemId": "",                               # HTTP 401.
-                                                        ## 加密某个目录或文件. "<文件或者目录的ID>?<加密模式>?<用户名>:<密码>"
-                                                        
-        "RefreshURL": 189,                              # Min: 180, Max: 1800; Allow Max: 2329
-                                                        ## 下载直链缓存的秒数. 超时则被动更新.
-                                                        
-        "RefreshInterval": 1800                         # Max: Null, Min: 300
-                                                        ## 刷新目录结构,如果不常更新,建议设置更长时间.
+        "Enable": 1,            # 0: Disable, 1: Enbale.
+                                ## 0: 关闭, 1: 打开         
+        "UserName": "",         # Input Phone Number.
+                                ## 天翼云网盘登陆用户名(不要带上'@189.cn').      
+        "Password": "",         # Input Password.
+                                ## 天翼云网盘登陆密码.          
+        "CaptchaMode": "0",     # Captcha Mode. 0: Auto Reject, 1: Manual Input, other: API URL. 
+                                ## 验证码. 0: 遇到验证码拒绝登陆, 1: 手动输入验证, 其他: 自动识别验证码的API.       
+        "RefreshToken": "",     # Token. * Do Not Modify It.
+                                ## 天翼网盘会话. 保持默认, 如果出现异常, 请将该值清空.
+        "SubPath": "/CTList",   # Index Path. * Unique Per Account.
+                                ## 指定某账户挂载在网站的某个目录, 多账户时每个目录值必须唯一.             
+        "RootPathId": "-11",    # Default Root: -11
+                                ## 设置展示天翼网盘目录的ID, 根目录为 -11.  
+        "HideItemId": "0|-16",  # Allow Folder and File.
+                                ## 不展示某个目录或文件, 填写其ID. 每项用"|"分隔.  
+        "AuthItemId": "",       # HTTP 401.
+                                ## 加密某个目录或文件. "<文件或者目录的ID>?<加密模式>?<用户名>:<密码>" 
+        "RefreshURL": 189,      # Min: 180, Max: 1800; Allow Max: 2329
+                                ## 下载直链缓存的秒数. 超时则被动更新.                                    
+        "RefreshInterval": 1800 # Max: Null, Min: 300
+                                ## 刷新目录结构,如果不常更新,建议设置更长时间.
     }
 ]
 ```
 
 # 准备工作
+
+#### centos系统
+```
+#更新源
+yum install epel-release
+#查看是否安装go环境
+go version
+#安装go环境
+yum install golang
+```
 #### `CTList`皮肤文件与`OneList`皮肤文件完全兼容.
 #### 可实现在线浏览图片,在线观看视频等其他功能 [点此前往下载](https://github.com/MoeClub/OneList/tree/master/Rewrite/@Theme)
 - **授权码** [32位小写字母和数字,一个授权码可以绑定多个用户名,用于启动多账户.] **[*[获取授权码](https://api.moeclub.org/CTListRegister/)*]**
